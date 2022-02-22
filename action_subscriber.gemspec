@@ -22,15 +22,15 @@ Gem::Specification.new do |spec|
 
   if ENV['PLATFORM'] == "java" || ::RUBY_PLATFORM == 'java'
     spec.platform = "java"
-    spec.add_dependency 'march_hare', '>= 2.7.0'
+    spec.add_dependency 'march_hare', '~> 4.4'
   else
-    spec.add_dependency 'bunny', '>= 1.5.0'
+    spec.add_dependency 'bunny'
   end
   spec.add_dependency 'concurrent-ruby'
   spec.add_dependency 'middleware'
   spec.add_dependency 'thor'
 
-  spec.add_development_dependency "active_publisher", "~> 0.1.5"
+  spec.add_development_dependency "active_publisher"
   spec.add_development_dependency "activerecord", ">= 3.2"
   spec.add_development_dependency "bundler", ">= 1.6"
   spec.add_development_dependency "pry-nav"
